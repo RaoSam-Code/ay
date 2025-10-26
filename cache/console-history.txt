@@ -1,0 +1,4 @@
+console.log("Vaults:", await factory.getAllVaults());
+console.log("Owner:", await factory.owner());
+const factory = await Factory.attach("0x2279B7A0a67DB372996a5FaB50D91eAA73d2eBe6");
+const Factory = await ethers.getContractFactory("StrategyVaultFactory");
