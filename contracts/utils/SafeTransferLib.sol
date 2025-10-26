@@ -8,7 +8,7 @@ library SafeTransferLib {
         require(ok, "SafeTransferLib: ETH transfer failed");
     }
 
-    function balance(address account) internal view returns (uint256) {
+    function balanceOf(address account) internal view returns (uint256) {
         return account.balance;
     }
 }

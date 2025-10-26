@@ -3,9 +3,7 @@ const { ethers } = require("hardhat");
 async function main() {
   const Factory = await ethers.getContractFactory("StrategyVaultFactory");
   const factory = await Factory.deploy();
-  await factory.deployed();
-
-  console.log("StrategyVaultFactory deployed:", factory.address);
+  console.log("StrategyVaultFactory deployed:", factory.target ?? factory.address);
 }
 
 main().catch((error) => {
